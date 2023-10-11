@@ -1,0 +1,227 @@
+---
+import { Image } from 'astro:assets';
+
+import Data from '../components/data.astro';
+import logo from '../../src/img/logo.png';
+
+const { key } = Astro.props;
+
+const foregroundColor = '#ffffff';
+const backgroundColor = '#7e5c5c';
+const headersColor = '#503737';
+const textColor = '#333333';
+---
+
+<style
+  define:vars={{
+    foregroundColor,
+    backgroundColor,
+    headersColor,
+    textColor,
+  }}
+>
+  body {
+    font-family: 'PT Sans', sans-serif;
+    color: var(--textColor);
+    min-height: 100vh;
+    width: 100vw;
+    text-size-adjust: none;
+  }
+
+  h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--headersColor);
+  }
+
+  hr {
+    border: 0.8px solid var(--headersColor);
+    margin-bottom: 2rem;
+  }
+
+  .hr-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--shadowColor);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.625rem;
+    margin-top: 2rem;
+  }
+
+  a {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.8rem;
+    border: 1.5px solid var(--headersColor);
+    border-radius: 3.215rem;
+    background-color: var(--headersColor);
+    text-decoration: none;
+    color: var(--foregroundColor);
+    letter-spacing: 0.1rem;
+    transition: 250ms ease-in-out;
+  }
+
+  a:hover {
+    color: var(--headersColor);
+    background-color: var(--foregroundColor);
+  }
+
+  .mail-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 18.125rem;
+  }
+
+  .fa-facebook {
+    padding-right: 0.9rem;
+    padding-left: 0.95rem;
+    font-size: 1.25rem;
+  }
+
+  .contact-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+
+  .container {
+    background-color: var(--foregroundColor);
+    padding: 3rem 5rem 3rem 5rem;
+    width: 25rem;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .data-value {
+    font-weight: 200;
+    color: var(--textColor);
+    text-transform: none;
+    display: inline;
+  }
+
+  .foundation-contact {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .fa-envelope {
+    padding-top: 4px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .container {
+      box-shadow: 12px 12px 18px -9px var(--headersColor);
+      border-radius: 15px;
+    }
+
+    body {
+      background-color: var(--backgroundColor);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-size-adjust: none;
+    }
+  }
+</style>
+
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Fundacja Pałac w Szelejewie - dane rejestrowe, kontakt oraz aktualności."
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7e5c5c" />
+    <meta name="msapplication-TileColor" content="#7e5c5c" />
+    <meta name="theme-color" content="#7e5c5c" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cc62848ea4.js"
+      crossorigin="anonymous"></script>
+
+    <title>Fundacja Pałac w Szelejewie</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <Image src={logo} alt="logotyp fundacji" class="logo" />
+      </header>
+
+      <section class="foundation-info">
+        <header>
+          <h2 class="hr-title">dane fundacji</h2>
+        </header>
+
+        <hr />
+
+        <Data key="KRS">
+          <span class="data-value">0000969885</span>
+        </Data>
+
+        <Data key="NIP">
+          <span class="data-value">6961900860</span>
+        </Data>
+
+        <Data key="REGON">
+          <span class="data-value">521940079</span>
+        </Data>
+
+        <Data key="Adres">
+          <p class="data-value">Parkowa 1 A, 63-800 Gostyń, Polska</p>
+        </Data>
+
+        <Data key="Numer Rachunku Bankowego">
+          <br />
+          <br />
+          <div>
+            <p class="data-value">
+              Santander Bank Polska<br /> 80 1090 1870 0000 0001 5048 4280
+            </p>
+          </div>
+        </Data>
+      </section>
+
+      <section class="foundation-contact">
+        <header>
+          <h2 class="hr-title">Kontakt</h2>
+        </header>
+
+        <hr />
+      </section>
+
+      <div class="contact-buttons-container">
+        <a href="mailto:info@palacwszelejewie.pl" class="mail-container"
+          ><span class="fa-regular fa-envelope"
+          ></span>info@palacwszelejewie.pl</a
+        >
+
+        <a
+          href="https://www.facebook.com/palacwszelejewie/?locale=pl_PL"
+          class="fa fa-facebook"></a>
+      </div>
+    </main>
+  </body>
+</html>

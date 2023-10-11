@@ -1,0 +1,19 @@
+{
+  "name": "Fundacja Pałac w Szelejewie",
+  "short_name": "Fundacja Pałac w Szelejewie",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#7e5c5c",
+  "background_color": "#7e5c5c",
+  "display": "standalone"
+}
