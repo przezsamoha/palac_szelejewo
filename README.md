@@ -1,4 +1,4 @@
-![palac-w-szelejewie](https://github.com/przezsamoha/palac_szelejewo/assets/99020665/1b0f92e2-59b6-46f3-8596-a4d0ab874e5a)
+![palac-w-szelejewie](https://github.com/przezsamoha/palac_szelejewo/assets/99020665/e4cdae16-89f6-4b50-b286-85b31ce34df0)
 
 # Fundacja Pałac w Szelejewie
 
@@ -22,7 +22,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`     | Starts local dev server at `localhost:4321`  |
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
-
-## Licence
-
-MIT

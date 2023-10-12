@@ -20,12 +20,15 @@ const textColor = '#333333';
     textColor,
   }}
 >
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: 'PT Sans', sans-serif;
     color: var(--textColor);
     min-height: 100vh;
+    min-width: 440px;
     width: 100vw;
-    text-size-adjust: none;
   }
 
   h1 {
@@ -42,27 +45,28 @@ const textColor = '#333333';
   }
 
   .hr-title {
-    font-size: 0.9rem;
+    font-size: 12px;
     font-weight: 500;
     color: var(--shadowColor);
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1.2px;
     margin-bottom: 0.625rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   a {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    font-size: 13px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     padding-top: 0.7rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.7rem;
     border: 1.5px solid var(--headersColor);
     border-radius: 3.215rem;
     background-color: var(--headersColor);
     text-decoration: none;
     color: var(--foregroundColor);
-    letter-spacing: 0.1rem;
+    letter-spacing: 2.5px;
     transition: 250ms ease-in-out;
   }
 
@@ -75,30 +79,35 @@ const textColor = '#333333';
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 18.125rem;
+    width: 18rem;
   }
 
   .fa-facebook {
-    padding-right: 0.9rem;
-    padding-left: 0.95rem;
+    padding-right: 0.8rem;
+    padding-left: 0.85rem;
     font-size: 1.25rem;
   }
 
   .contact-buttons-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 2.5rem;
+    width: 352px;
+    margin: auto;
+    /* margin-left: 20px; */
+    /* align-items: center; */
   }
 
   .container {
     background-color: var(--foregroundColor);
-    padding: 3rem 5rem 3rem 5rem;
-    width: 25rem;
+    padding: 3rem 2rem 3rem 2rem;
+    width: 100%;
   }
 
   .logo {
     width: 100%;
+    max-width: 440px;
     height: auto;
+    margin: auto;
   }
 
   .data-value {
@@ -108,19 +117,19 @@ const textColor = '#333333';
     display: inline;
   }
 
-  .foundation-contact {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .fa-envelope {
-    padding-top: 4px;
-  }
-
   @media only screen and (min-width: 600px) {
     .container {
       box-shadow: 12px 12px 18px -9px var(--headersColor);
       border-radius: 15px;
+      width: 32rem;
+      padding: 3rem 4rem 3rem 4rem;
+    }
+
+    .contact-buttons-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      margin: 0;
     }
 
     body {
@@ -128,7 +137,6 @@ const textColor = '#333333';
       display: flex;
       align-items: center;
       justify-content: center;
-      text-size-adjust: none;
     }
   }
 </style>
@@ -194,7 +202,7 @@ const textColor = '#333333';
         </Data>
 
         <Data key="Adres">
-          <p class="data-value">Parkowa 1 A, 63-800 Gostyń, Polska</p>
+          <p class="data-value">Parkowa 1A, 63-800 Gostyń, Polska</p>
         </Data>
 
         <Data key="Numer Rachunku Bankowego">
@@ -202,7 +210,7 @@ const textColor = '#333333';
           <br />
           <div>
             <p class="data-value">
-              Santander Bank Polska<br /> 80 1090 1870 0000 0001 5048 4280
+              Santander Bank Polska 80 1090 1870 0000 0001 5048 4280
             </p>
           </div>
         </Data>

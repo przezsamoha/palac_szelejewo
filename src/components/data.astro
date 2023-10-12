@@ -1,16 +1,16 @@
 ---
 const { key } = Astro.props;
 
-const headerColor = "#503737";
-const textColor = "#333333";
+const headerColor = '#503737';
+const textColor = '#333333';
 ---
 
-<style define:vars={{headerColor, textColor}}>
+<style define:vars={{ headerColor, textColor }}>
   h3 {
-    color: var(--headerColor);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
+    color: var(--headerColor);
   }
 </style>
 
